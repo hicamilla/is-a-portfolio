@@ -1,0 +1,157 @@
+:root {
+	--font-title: "Urbanist", sans-serif;
+	--font-body: "Work Sans", sans-serif;
+	--bg: #f5f3f0;
+	--text: #000000;
+	--muted: #6b7280;
+	--gray-800: #1f2937;
+	--gray-600: #4b5563;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: var(--bg);
+	color: var(--text);
+	margin: 0;
+}
+/*====Layout====*/
+.main-content {
+	position: relative;
+	min-height: 100%;
+}
+
+.content-wrapper {
+	position: relative;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem 2rem 8rem;
+}
+
+/*====Right image block(absolute)====*/
+.image-section {
+	position: absolute;
+	top: 4rem;
+	right: 0;
+	z-index: 10;
+}
+
+.image-container {
+	position: relative;
+}
+
+.main-image {
+	width: 20rem;
+	height: 24rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	background: #ffffff;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.main-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.background-blur {
+	position: absolute;
+	left: 2rem;
+	top: -2rem;
+	width: 6rem;
+	height: 6rem;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 9999px;
+	filter: blur(4px);
+	z-index: -1;
+}
+
+/* ===== Typography block ===== */
+.typography-section {
+	position: relative;
+	z-index: 30;
+	padding-top: 1rem;
+}
+
+/* Headline */
+.main-title {
+	margin: 0;
+	font-weight: 800;
+	line-height: 0.9;
+	letter-spacing: -0.01em;
+	color: #000;
+	font-size: 120px;
+	font-family: var(--font-title);
+}
+
+/* White stroke duplicate behind 'CARDOSO' */
+.title-with-stroke {
+	position: relative;
+	display: inline-block;
+}
+
+.title-stroke {
+	position: absolute;
+	inset: 0;
+	color: #ffffff;
+	opacity: 0.4;
+	-webkit-text-stroke: 3px #ffffff;
+	line-height: 0.8;
+	letter-spacing: -0.01em;
+	z-index: -1;
+}
+
+/* Below-title content */
+.content-below {
+	padding-top: 2rem;
+	max-width: 50rem;
+}
+
+.divider-line {
+	width: 100%;
+	height: 1px;
+	background: #000;
+	margin-bottom: 2rem;
+}
+
+.role-text {
+	margin-bottom: 0.75rem;
+	font-size: 16px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.description-text {
+	color: #374151;
+	font-size: 16px;
+	line-height: 1.75;
+	max-width: 28rem;
+}
+
+/* ===== Bottom curved black section ===== */
+.curved-bottom {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 8rem;
+	background: #000;
+	z-index: 40;
+}
+
+.curve-shape {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 2rem;
+	background: var(--bg);
+}
