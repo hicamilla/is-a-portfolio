@@ -52,22 +52,44 @@ body {
 .hero-container {
 	margin: 40px 0px;
 }
-
-/* Image */
-.main-image {
-	width: min(22rem, 100%);
-	aspect-ratio: 24 / 30;
-	height: auto;
-	border-radius: 1rem;
-	overflow: hidden;
-	background: var(--white);
-	box-shadow: 0 25px 50px rgba(38, 36, 36, 0.25);
+/* Image Stack */
+.card-stack {
+	position: relative;
+	display: inline-block;
+	width: 320px;
+}
+.card {
+	position: absolute;
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s;
+}
+.card.middle {
+	position: relative;
+	z-index: 3;
 }
 
-.main-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.card-left {
+	top: 8px;
+	left: -30px;
+	transform: rotate(-18deg);
+	z-index: 1;
+	opacity: 0.8;
+}
+.card-right {
+	top: 8px;
+	right: -30px;
+	transform: rotate(15deg);
+	z-index: 2;
+	opacity: 0.8;
+}
+
+.card-stack:hover .card-left {
+	transform: rotate(-25deg) translateX(-20px);
+}
+.card-stack:hover .card-right {
+	transform: rotate(25deg) translateX(20px);
 }
 
 /* ===== TYPOGRAPHY BLOCK ===== */
@@ -129,6 +151,28 @@ body {
 	line-height: 1.75;
 	max-width: 28rem;
 	margin-top: 0.5rem;
+}
+
+/* ===== WAVE DIVIDER ===== */
+.wave-separator {
+	position: relative;
+	line-height: 0;
+	height: 160px; /* was 120 — more room for the curve */
+	margin-top: -1px; /* hide hairline seam */
+}
+
+.wave-separator .wave {
+	display: block;
+	width: 100%;
+	height: 160px; /* match container height */
+}
+
+.wave-separator .wave-top {
+	fill: var(--bg); /* hero background color */
+}
+
+.wave-separator .wave-bottom {
+	fill: var(--text); /* flows into .section-dark */
 }
 
 /*==== FOOTER ====*/

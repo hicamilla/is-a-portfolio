@@ -96,18 +96,34 @@
 
           <!-- IMAGE COLUMN -->
           <div class="col-12 col-lg-5 order-1 order-lg-2 text-center text-lg-end">
-            <figure class="m-0">
-              <div class="image-container d-inline-block">
-                <div class="main-image">
-                  <img src="/images/img_thumb_logo.png" alt="Camilla Cardoso - portrait/logo" class="img-fluid"
-                    width="400" height="400"/>
-                </div>
-              </div>
-            </figure>
+          <figure class="m-0">
+            <div class="card-stack d-inline-block">
+              <!-- Back cards (decorative) -->
+              <img src="./images/img_thumb_logo.png" alt="" aria-hidden="true" class="card card-left" />
+              <img src="./images/img_thumb_logo.png" alt="" aria-hidden="true" class="card card-right" />
+              <!-- Main card (announced to screen readers) -->
+              <img src="./images/img_thumb_logo.png" alt="Camilla Cardoso - portrait/logo" decoding="async" fetchpriority="high"
+                class="card middle" />
+            </div>
+          </figure>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- WAVE DIVIDER -->
+    <div class="wave-separator" aria-hidden="true">
+      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
+        <path class="wave-top" d="M0,96
+             C 220,24  500,168  720,96
+             C 960,24  1220,140 1440,72
+             L1440,0 L0,0 Z" />
+        <path class="wave-bottom" d="M0,96
+             C 220,24  500,168  720,96
+             C 960,24  1220,140 1440,72
+             L1440,160 L0,160 Z" />
+      </svg>
+    </div>
 
     <!-- Placeholder for Work Section -->
     <section id="work" class="py-5">
@@ -128,7 +144,6 @@
 
   <!-- FOOTER -->
   <footer id="footer" class="footer">
-    <hr class="footer-divider w-75 mx-auto my-3" />
     <div class="container d-flex justify-content-center flex-wrap gap-3 py-4">
       <!-- Social Icons -->
       <nav class="footer-social d-flex gap-3 fs-4" aria-label="Social links">
