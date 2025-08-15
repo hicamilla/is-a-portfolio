@@ -30,13 +30,6 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./src/style.css" />
-
-  <!-- Inline smooth scroll -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
 </head>
 
 <body>
@@ -99,10 +92,10 @@
           <figure class="m-0">
             <div class="card-stack d-inline-block">
               <!-- Back cards (decorative) -->
-              <img src="./images/img_thumb_logo.png" alt="" aria-hidden="true" class="card card-left" />
-              <img src="./images/img_thumb_logo.png" alt="" aria-hidden="true" class="card card-right" />
+              <img src="./images/img_thumb_logo.png" width="800" height="1000"  alt="" aria-hidden="true" class="card card-left" />
+              <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="" aria-hidden="true" class="card card-right" />
               <!-- Main card (announced to screen readers) -->
-              <img src="./images/img_thumb_logo.png" alt="Camilla Cardoso - portrait/logo" decoding="async" fetchpriority="high"
+              <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="Camilla Cardoso - portrait/logo" decoding="async" fetchpriority="high"
                 class="card middle" />
             </div>
           </figure>
@@ -125,15 +118,44 @@
       </svg>
     </div>
 
-    <!-- Placeholder for Work Section -->
-    <section id="work" class="py-5">
-      <div class="container">
-        <h2 class="mb-4">My Work</h2>
-        <p>Projects will be showcased here.</p>
-      </div>
-    </section>
+    <!-- WORK SECTION -->
+     <section id="work" class="work-section position-relative">
+      <div class="background-text"></div>
+      <div class="container position-relative">
+        <div class="row justify-content-center g-4">
 
-    <!-- Placeholder for Contact Section -->
+          <!-- Project 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#" class="work-card d-block position-relative overflow-hidden rounded-4">
+              <img src="./images/work-1.jpg" alt="Project One" width="800" height="1000" class="img-fluid w-100">
+              <div class="overlay">Project One</div>
+            </a>
+          </div>
+          <!-- Project 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#" class="work-card d-block position-relative overflow-hidden rounded-4">
+              <img src="./images/work-2.jpg" alt="Project One" width="800" height="1000" class="img-fluid w-100">
+              <div class="overlay">Project Two</div>
+            </a>
+          </div>
+          <!-- Project 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <a href="#" class="work-card d-block position-relative overflow-hidden rounded-4">
+              <img src="./images/work-3.jpg" alt="Project Three" width="800" height="1000" class="img-fluid w-100">
+              <div class="overlay">Project One</div>
+            </a>
+          </div>
+        </div>
+        <!-- Buttom -->
+         <div class="text-center mt-5 pt-4">
+          <a href="#" class="btn btn-outline-light btn-lg px-4">
+            VIEW ALL PROJECTS
+          </a>
+         </div>
+      </div>
+     </section>
+
+    <!-- CONTACT SECTION -->
     <section id="contact" class="py-5 bg-light">
       <div class="container">
         <h2 class="mb-4">Get in Touch</h2>
