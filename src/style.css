@@ -4,6 +4,7 @@
 	--font-title: "Urbanist", sans-serif;
 	--font-body: "Work Sans", sans-serif;
 	--bg: #eee5da;
+	--bg-dark: #0f0e0e;
 	--bg-light: #ddd4ca;
 	--text: #262424;
 	--muted: #6b7280;
@@ -164,16 +165,25 @@ figure {
 	width: 100%;
 	height: 160px;
 }
-.wave-separator .wave-top {
+/*Light → Dark (for between light and dark section*/
+.wave--bg-to-text .wave-top {
 	fill: var(--bg);
 }
-.wave-separator .wave-bottom {
-	fill: #0f0e0e; /*can be back to text color*/
+.wave--bg-to-text .wave-bottom {
+	fill: var(--bg-dark);
+}
+
+/*Dark → Light (for between dark and light section*/
+.wave--text-to-bg .wave-top {
+	fill: var(--bg-dark);
+}
+.wave--text-to-bg .wave-bottom {
+	fill: var(--bg);
 }
 
 /* ===== WORK SECTION ===== */
 .work-section {
-	background-color: #0f0e0e; /*can be back to text color*/
+	background-color: var(--bg-dark); /*can be back to text color*/
 	padding: 5rem 0;
 	position: relative;
 }
@@ -233,7 +243,7 @@ figure {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font: var(--font-title);
+	font-family: var(--font-title);
 	font-size: 1.9rem;
 	font-weight: 700;
 	letter-spacing: 1.3px;
@@ -275,6 +285,127 @@ figure {
 	position: relative;
 	z-index: 1;
 	margin-top: 4rem;
+}
+/* ===== TECH STACK SECTION =====*/
+.stack-section {
+	background: var(--bg-dark);
+	color: var(--white);
+}
+
+.stack-section .logo-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.stack-section .logo-icon i {
+	font-size: clamp(3.5rem, 3.3vw, 2.42rem);
+	color: var(--white);
+	opacity: 0.9;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.stack-section .logo-icon:hover i,
+.stack-section .logo-icon:focus-visible i {
+	transform: translateY(-2px);
+	opacity: 1;
+}
+
+.stack-section .skill-badge,
+.stack-section .logo-icon {
+	background: transparent !important;
+	border: 0 !important;
+	padding: 0 !important;
+	box-shadow: none !important;
+}
+
+.stack-section .stack-icons {
+	--bs-gutter-x: 1.375rem;
+	--bs-gutter-y: 1.375rem;
+}
+
+.stack-section .logos-inner {
+	padding-bottom: 2.5rem;
+}
+
+/* ===== SKILL SECTION =====*/
+.feature-card {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.feature-title {
+	font-family: var(--font-title);
+	font-weight: 800;
+	font-size: 1.4rem;
+	margin: 1rem 0 0.5rem;
+	color: var(--text);
+	text-align: center;
+}
+
+.feature-text {
+	font-family: var(--font-body);
+	color: var(--gray-600);
+	font-size: 1rem;
+	line-height: 1.6;
+	margin: 0 auto;
+	max-width: 48ch;
+	text-align: center;
+}
+
+.shape {
+	width: 110px;
+	height: 110px;
+	margin: 0 auto 0.75rem;
+	position: relative;
+	isolation: isolate;
+	display: block;
+}
+
+.shape-arch {
+	background: color-mix(in srgb, var(--highlight) 85%, white);
+	border-radius: 56px 56px 0 0;
+}
+.shape-quarter {
+	background: var(--contrast);
+	border-radius: 0 110px 0 0;
+}
+.shape-leaf {
+	background: color-mix(in srgb, var(--highlight) 35%, var(--contrast));
+	border-radius: 28px 56px 56px 28px;
+}
+
+.shape::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	width: 60%;
+	height: 2px;
+	background: linear-gradient(
+		90deg,
+		transparent 0 25%,
+		var(--text) 25% 75%,
+		transparent 75% 100%
+	);
+	transform: rotate(-35deg) translateY(20%);
+	opacity: 0.45;
+}
+.shape::before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: var(--text);
+	border-radius: 2px;
+	right: 18%;
+	top: 38%;
+	opacity: 0.5;
 }
 
 /* ===== FOOTER ===== */

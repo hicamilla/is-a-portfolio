@@ -104,17 +104,11 @@
       </div>
     </section>
 
-    <!-- WAVE DIVIDER -->
-    <div class="wave-separator" aria-hidden="true">
+    <!-- WAVE DIVIDER TOP -->
+    <div class="wave-separator wave--bg-to-text" aria-hidden="true">
       <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
-        <path class="wave-top" d="M0,96
-             C 220,24  500,168  720,96
-             C 960,24  1220,140 1440,72
-             L1440,0 L0,0 Z" />
-        <path class="wave-bottom" d="M0,96
-             C 220,24  500,168  720,96
-             C 960,24  1220,140 1440,72
-             L1440,160 L0,160 Z" />
+        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
+        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
       </svg>
     </div>
 
@@ -155,11 +149,78 @@
       </div>
      </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-5 bg-light">
+    <!-- TECH STACK STRIP -->
+    <section id="stack" class="stack-section">
       <div class="container">
-        <h2 class="mb-4">Get in Touch</h2>
-        <p>Contact form or details will go here.</p>
+        <div class="logos-inner py-5 px-3">
+          <div class="row stack-icons row-cols-3 row-cols-sm-4 row-cols-md-6 g-4 justify-content-between justify-content-md-center align-items-center text-center">
+            <div class="col">
+              <span class="logo-icon" aria-label="HTML5"><i class="fa-brands fa-html5"></i></span>
+            </div>
+            <div class="col">
+              <span class="logo-icon" aria-label="CSS3"><i class="fa-brands fa-css3-alt"></i></span>
+            </div>
+            <div class="col">
+              <span class="logo-icon" aria-label="JavaScript"><i class="fa-brands fa-js"></i></span>
+            </div>
+            <div class="col">
+              <span class="logo-icon" aria-label="React"><i class="fa-brands fa-react"></i></span>
+            </div>
+            <div class="col">
+              <span class="logo-icon" aria-label="Bootstrap"><i class="fa-brands fa-bootstrap"></i></span>
+            </div>
+            <div class="col">
+              <span class="logo-icon" aria-label="Python"><i class="fa-brands fa-python"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- WAVE DIVIDER BOTTOM -->
+     <div class="wave-separator wave--text-to-bg" aria-hidden="true">
+      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
+        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
+        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
+      </svg>
+    </div>
+
+    <!-- SKILL SECTION -->
+    <section id="skills" class="skills-section position-relative py-5">
+      <div class="container">
+        <!-- Three service cards -->
+        <div class="row g-4 justify-content-center text-center">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="feature-card h-100">
+              <div class="shape shape-arch" aria-hidden="true"></div>
+              <h3 class="feature-title">Web Development</h3>
+              <p class="feature-text">
+                Semantic HTML, modern CSS (Flex/Grid), JavaScript & React. Built with Bootstrap for speed and consistency.
+              </p>
+            </article>
+          </div>
+    
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="feature-card h-100">
+              <div class="shape shape-quarter" aria-hidden="true"></div>
+              <h3 class="feature-title">UI/Visual Design</h3>
+              <p class="feature-text">
+                Figma to frontend: clear layouts, typography, spacing, and accessible colour contrast.
+              </p>
+            </article>
+          </div>
+    
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="feature-card h-100">
+              <div class="shape shape-leaf" aria-hidden="true"></div>
+              <h3 class="feature-title">Marketing & Analytics</h3>
+              <p class="feature-text">
+                CRM & email flows, landing pages, and lightweight GA insights to iterate on conversion.
+              </p>
+            </article>
+          </div>
+        </div>
+    
       </div>
     </section>
   </main>
