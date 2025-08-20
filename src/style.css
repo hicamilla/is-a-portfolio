@@ -27,7 +27,6 @@ body {
 	scroll-behavior: smooth;
 	background-color: var(--bg);
 }
-
 img {
 	max-width: 100%;
 	height: auto;
@@ -36,8 +35,6 @@ img {
 figure {
 	margin: 0;
 }
-
-/* Typography helpers (match HTML) */
 .font-title {
 	font-family: var(--font-title);
 }
@@ -192,7 +189,7 @@ figure {
 	fill: var(--bg);
 }
 
-/* flip vertically (curve on top) */
+/* Flip vertically (curve on top//bottom) */
 .wave--flip .wave {
 	transform: scaleY(-1);
 	transform-origin: 50% 50%;
@@ -209,12 +206,11 @@ figure {
 	position: relative;
 	z-index: 1;
 }
-/* first project row top spacing */
+
 .work-section .container > .row:first-of-type {
 	margin-top: clamp(1.5rem, 4.5vw, 3rem);
 }
 
-/* subtle multi-line watermark */
 .background-text {
 	position: absolute;
 	inset: 0;
@@ -286,9 +282,9 @@ figure {
 	color: var(--text);
 	font-weight: 700;
 	letter-spacing: 0.05em;
-	padding: 0.95rem 1.8rem; /* taller */
+	padding: 0.95rem 1.8rem;
 	font-size: 1rem;
-	border-radius: 999px; /* pill */
+	border-radius: 999px;
 	transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 .work-section .btn:hover,
@@ -309,7 +305,6 @@ figure {
 	justify-content: center;
 	width: clamp(68px, 8vw, 104px);
 	height: clamp(68px, 8vw, 104px);
-	/* clean surface */
 	background: transparent !important;
 	border: 0 !important;
 	padding: 0 !important;
@@ -375,7 +370,7 @@ figure {
 	isolation: isolate;
 	display: block;
 }
-/* fallbacks first, then color-mix for modern browsers */
+
 .shape-arch {
 	background: var(--highlight);
 	background: color-mix(in srgb, var(--highlight) 85%, white);
@@ -419,8 +414,6 @@ figure {
 }
 
 /* ===== CONTACT ===== */
-/* NOTE: .contact-section removed (HTML uses inline colors now) */
-
 .availability-badge {
 	background: transparent;
 }
@@ -473,7 +466,6 @@ figure {
 	}
 }
 
-/* Remove the programmatic focus ring when sections receive focus after anchor jumps */
 section[tabindex="-1"]:focus:not(:focus-visible) {
 	outline: none;
 }
