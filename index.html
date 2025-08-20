@@ -35,7 +35,7 @@
 <body>
   <!-- HEADER / NAVBAR -->
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Primary navigation">
+    <nav class="navbar navbar-expand-lg bg-transparent" aria-label="Primary navigation">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
           <img src="./images/logocamilla.svg" alt="Camilla C. logo" height="30" width="30" />
@@ -89,16 +89,18 @@
 
           <!-- IMAGE COLUMN -->
           <div class="col-12 col-lg-5 order-1 order-lg-2 text-center text-lg-end">
-          <figure class="m-0">
-            <div class="card-stack d-inline-block">
-              <!-- Back cards (decorative) -->
-              <img src="./images/img_thumb_logo.png" width="800" height="1000"  alt="" aria-hidden="true" class="card card-left" />
-              <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="" aria-hidden="true" class="card card-right" />
-              <!-- Main card (announced to screen readers) -->
-              <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="Camilla Cardoso - portrait/logo" decoding="async" fetchpriority="high"
-                class="card middle" />
-            </div>
-          </figure>
+            <figure class="m-0">
+              <div class="card-stack d-inline-block">
+                <!-- Back cards (decorative) -->
+                <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="" aria-hidden="true"
+                  class="card card-left" loading="lazy" />
+                <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="" aria-hidden="true"
+                  class="card card-right" loading="lazy" />
+                <!-- Main card (announced to screen readers) -->
+                <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="Camilla Cardoso - portrait/logo"
+                  decoding="async" fetchpriority="high" class="card middle" />
+              </div>
+            </figure>
           </div>
         </div>
       </div>
@@ -113,7 +115,8 @@
     </div>
 
     <!-- WORK SECTION -->
-     <section id="work" class="work-section position-relative">
+    <section id="work" class="work-section position-relative" aria-labelledby="work-title">
+      <h2 id="work-title" class="visually-hidden">Work</h2>
       <div class="background-text"></div>
       <div class="container position-relative">
         <div class="row justify-content-center g-4">
@@ -121,64 +124,61 @@
           <!-- Project 1 -->
           <div class="col-12 col-md-6 col-lg-4">
             <a href="#" class="work-card d-block position-relative overflow-hidden rounded-4">
-              <img src="./images/work-1.jpg" alt="Project One" width="800" height="1000" class="img-fluid w-100">
+              <img src="./images/work-1.jpg" alt="Project One" width="800" height="1000" class="img-fluid w-100"
+                loading="lazy">
               <div class="overlay">Project One</div>
             </a>
           </div>
           <!-- Project 2 -->
           <div class="col-12 col-md-6 col-lg-4">
             <a href="#" class="work-card d-block position-relative overflow-hidden rounded-4">
-              <img src="./images/work-2.jpg" alt="Project One" width="800" height="1000" class="img-fluid w-100">
+              <img src="./images/work-2.jpg" alt="Project Two" width="800" height="1000" class="img-fluid w-100"
+                loading="lazy">
               <div class="overlay">Project Two</div>
             </a>
           </div>
           <!-- Project 3 -->
           <div class="col-12 col-md-6 col-lg-4">
             <a href="#" class="work-card d-block position-relative overflow-hidden rounded-4">
-              <img src="./images/work-3.jpg" alt="Project Three" width="800" height="1000" class="img-fluid w-100">
-              <div class="overlay">Project One</div>
+              <img src="./images/work-3.jpg" alt="Project Three" width="800" height="1000" class="img-fluid w-100"
+                loading="lazy">
+              <div class="overlay">Project Three</div>
             </a>
           </div>
         </div>
-        <!-- Buttom -->
-         <div class="text-center mt-5 pt-4">
+        <!-- Button -->
+        <div class="text-center mt-5 pt-4">
           <a href="#" class="btn btn-outline-light btn-lg px-4">
             VIEW ALL PROJECTS
           </a>
-         </div>
+        </div>
       </div>
-     </section>
+    </section>
 
     <!-- TECH STACK STRIP -->
-    <section id="stack" class="stack-section">
+    <section id="stack" class="stack-section" aria-labelledby="stack-title">
+      <h2 id="stack-title" class="visually-hidden">Tech Stack</h2>
       <div class="container">
         <div class="logos-inner py-5 px-3">
-          <div class="row stack-icons row-cols-3 row-cols-sm-4 row-cols-md-6 g-4 justify-content-between justify-content-md-center align-items-center text-center">
-            <div class="col">
-              <span class="logo-icon" aria-label="HTML5"><i class="fa-brands fa-html5"></i></span>
+          <div
+            class="row stack-icons row-cols-2 row-cols-sm-3 row-cols-md-auto g-4 justify-content-center align-items-center text-center">
+            <div class="col"><span class="logo-icon" aria-label="HTML5"><i class="fa-brands fa-html5"></i></span></div>
+            <div class="col"><span class="logo-icon" aria-label="CSS3"><i class="fa-brands fa-css3-alt"></i></span>
             </div>
-            <div class="col">
-              <span class="logo-icon" aria-label="CSS3"><i class="fa-brands fa-css3-alt"></i></span>
+            <div class="col"><span class="logo-icon" aria-label="JavaScript"><i class="fa-brands fa-js"></i></span>
             </div>
-            <div class="col">
-              <span class="logo-icon" aria-label="JavaScript"><i class="fa-brands fa-js"></i></span>
-            </div>
-            <div class="col">
-              <span class="logo-icon" aria-label="React"><i class="fa-brands fa-react"></i></span>
-            </div>
-            <div class="col">
-              <span class="logo-icon" aria-label="Bootstrap"><i class="fa-brands fa-bootstrap"></i></span>
-            </div>
-            <div class="col">
-              <span class="logo-icon" aria-label="Python"><i class="fa-brands fa-python"></i></span>
+            <div class="col"><span class="logo-icon" aria-label="React"><i class="fa-brands fa-react"></i></span></div>
+            <div class="col"><span class="logo-icon" aria-label="Bootstrap"><i
+                  class="fa-brands fa-bootstrap"></i></span></div>
+            <div class="col"><span class="logo-icon" aria-label="Python"><i class="fa-brands fa-python"></i></span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- WAVE DIVIDER BOTTOM -->
-     <div class="wave-separator wave--text-to-bg" aria-hidden="true">
+    <div class="wave-separator wave--text-to-bg" aria-hidden="true">
       <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
         <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
         <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
@@ -186,41 +186,101 @@
     </div>
 
     <!-- SKILL SECTION -->
-    <section id="skills" class="skills-section position-relative py-5">
+    <section id="skills" class="skills-section position-relative py-5" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="visually-hidden">Skills</h2>
       <div class="container">
         <!-- Three service cards -->
-        <div class="row g-4 justify-content-center text-center">
+        <div class="row g-4 justify-content-center text-center my-5">
           <div class="col-12 col-md-6 col-lg-4">
             <article class="feature-card h-100">
               <div class="shape shape-arch" aria-hidden="true"></div>
               <h3 class="feature-title">Web Development</h3>
-              <p class="feature-text">
-                Semantic HTML, modern CSS (Flex/Grid), JavaScript & React. Built with Bootstrap for speed and consistency.
+              <p class="feature-text px-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac augue euismod, egestas lectus et,
+                condimentum odio. Phasellus eleifend, odio mauris.
               </p>
             </article>
           </div>
-    
+
           <div class="col-12 col-md-6 col-lg-4">
             <article class="feature-card h-100">
               <div class="shape shape-quarter" aria-hidden="true"></div>
               <h3 class="feature-title">UI/Visual Design</h3>
-              <p class="feature-text">
-                Figma to frontend: clear layouts, typography, spacing, and accessible colour contrast.
+              <p class="feature-text px-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac augue euismod, egestas lectus et,
+                condimentum odio. Phasellus eleifend, odio mauris.
               </p>
             </article>
           </div>
-    
+
           <div class="col-12 col-md-6 col-lg-4">
             <article class="feature-card h-100">
               <div class="shape shape-leaf" aria-hidden="true"></div>
               <h3 class="feature-title">Marketing & Analytics</h3>
-              <p class="feature-text">
-                CRM & email flows, landing pages, and lightweight GA insights to iterate on conversion.
+              <p class="feature-text px-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac augue euismod, egestas lectus et,
+                condimentum odio. Phasellus eleifend, odio mauris.
               </p>
             </article>
           </div>
         </div>
-    
+      </div>
+    </section>
+
+    <!-- SECTION DIVIDER (thin wave + accent pill) -->
+    <div class="wave-separator wave--text-to-bg wave--sm wave--flip" aria-hidden="true">
+      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
+        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
+        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
+      </svg>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5" style="background: var(--bg-dark); color: var(--bg);">
+      <div class="container">
+        <!-- Header -->
+        <div class="row align-items-end g-3 mb-3">
+          <div class="col">
+            <p class="eyebrow text-uppercase font-body mb-1">Get In Touch</p>
+            <h2 class="display-3 fw-bold font-title m-0">CONTACT</h2>
+          </div>
+        </div>
+        <hr class="opacity-25 my-4">
+
+        <!-- Main grid -->
+        <div class="row position-relative g-4">
+          <!-- Availability badge (fixed class name) -->
+          <div
+            class="availability-badge position-absolute top-0 start-0 mt-4 ms-1 px-1 py-1 d-inline-flex align-items-center gap-3">
+            <span class="status-indicator"></span>
+            <span class="fw-bold text-uppercase" style="letter-spacing: 1px">Available for Work</span>
+          </div>
+
+          <!-- LEFT: CTA -->
+          <div class="col-lg-7 pt-5">
+            <h3 class="fw-bolder lh-1 display-5 font-title mb-4">
+              Let's create something<br><span class="fst-italic">amazing together</span>
+            </h3>
+            <p class="fs-6 font-body lh-base mb-0" style="color:var(--bg-light)">
+              Whether you have a specific project in mind or just want to explore possibilities, I'm here to help bring
+              your ideas to life. Every great project starts with a conversation.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 pt-4">
+              <a class="btn btn-contrast d-inline-flex align-items-center gap-2"
+                href="mailto:hicamillacardoso@gmail.com">
+                Send me an email
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- (Right column intentionally omitted for the minimal version) -->
+
+        </div>
       </div>
     </section>
   </main>
@@ -252,12 +312,17 @@
       </nav>
     </div>
     <p class="text-center small pb-3 mb-0">
-      &copy; 2024 CAMILLA | Powered by a lot of caffeine.
+      &copy; <span id="year"></span> CAMILLA | Powered by a lot of caffeine.
     </p>
   </footer>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Year auto-update -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
   <!-- Your JS -->
   <script src="./index.js" defer></script>
