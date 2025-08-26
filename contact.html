@@ -39,13 +39,13 @@
   <!--CONTACT-->
   <section id="contact" class="contact-section py-5">
     <div class="container">
-      <div class="row g-4 align-itens-start">
+      <div class="row g-4 align-items-start">
 
         <!--LEFT-->
         <div class="col-lg-7">
 
           <!--Availability badge-->
-          <div class="d-inline-flex align-itens-center gap-2 mb-3 availability-badge">
+          <div class="d-inline-flex align-items-center gap-2 mb-3 availability-badge">
             <span class="status-indicator position-relative">
               <span class="status-dot"></span>
               <span class="status-ping"></span>
@@ -65,7 +65,7 @@
             </h1>
           </header>
 
-          <div class=" border-top my-3"></div>
+          <div class="border-top my-3"></div>
 
           <p class="lead mb-4">
             Ready to bring your vision to life? I'm here to help create exceptional digital
@@ -74,21 +74,22 @@
 
 
           <!--EMAIL CTA-->
-          <div class="d-flex flex-wrap align-items-center gap-3">
+          <div class="mt-2">
             <div class="d-flex align-items-center gap-3">
               <span class="email-icon d-inline-flex justify-content-center align-items-center rounded-circle">
                 <i class="fa-regular fa-envelope"></i>
               </span>
               <div>
                 <div class="email-title small text-uppercase">Email me directly</div>
-                <a class="email-cta fw-semibold link-underline-opacity-2" href="mailto:hicamillacardoso@gmail.com">
+                <a class="email-cta fw-semibold font-title" style="color:var(--text)"
+                  href="mailto:hicamillacardoso@gmail.com">
                   hicamillacardoso@gmail.com
                 </a>
               </div>
             </div>
 
-            <button class="copy-cta d-inline-flex align-items-center" onclick="copyEmail(this)"
-              data-email="hicamillacardoso@gmail.com" aria-label="Copy email address" aria-live="polite">
+            <button class="copy-cta ps-5 pt-2" onclick="copyEmail(this)" data-email="hicamillacardoso@gmail.com"
+              aria-label="Copy email address" aria-live="polite">
               <!-- copy icon -->
               <svg class="copy-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -100,43 +101,48 @@
           </div>
         </div>
 
-        <!--RIGHT-->
-        <div class="col-lg-5">
-          <h3 class="h5 text-uppercase fw-semibold mb-3">
-            Connect &amp; Explore
-          </h3>
-          <div class="list-group list-group-flush rounded-3 overflow-hidden shadow-sm">
-            <a href="#work"
-              class="list-group-item list-group-item-action d-flex align-items-center justify-content-between py-3">
-              <div>
-                <div class="fw-semibold">View my work</div>
-                <small class="text-secondary"> Browse recent projects
+        <!-- RIGHT -->
+        <div class="col-lg-5 d-flex justify-content-lg-end mt-5">
+          <div class="right-card card border-0">
+            <div class="card-body p-4 p-lg-5">
+              <h3 class="h5 text-uppercase fw-semibold mb-4">
+                Connect &amp; Explore
+              </h3>
+              <div class="list-group right-list list-group-flush">
+                <a href="#work"
+                  class="list-group-item list-group-item-action d-flex align-items-start justify-content-between gap-3 py-4">
+                  <div class="flex-grow-1">
+                    <div class="fw-semibold">View My Work</div>
+                    <small class="text-secondary">Browse recent projects</small>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square right-icon"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hicamilla/" target="_blank" rel="noopener noreferrer"
+                  class="list-group-item list-group-item-action d-flex align-items-start justify-content-between gap-3 py-4">
+                  <div class="flex-grow-1">
+                    <div class="fw-semibold">LinkedIn Profile</div>
+                    <small class="text-secondary">Professional background</small>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square right-icon"></i>
+                </a>
+                <a href="https://github.com/hicamilla" target="_blank" rel="noopener noreferrer"
+                  class="list-group-item list-group-item-action d-flex align-items-start justify-content-between gap-3 py-4">
+                  <div class="flex-grow-1">
+                    <div class="fw-semibold">GitHub Repository</div>
+                    <small class="text-secondary">Code &amp; contributions</small>
+                  </div>
+                  <i class="fa-solid fa-arrow-up-right-from-square right-icon"></i>
+                </a>
+                <a href="./Camilla_Cardoso_Resume.pdf" download
+                  class="list-group-item list-group-item-action d-flex align-items-start justify-content-between gap-3 py-4">
+                  <div class="flex-grow-1">
+                    <div class="fw-semibold">Download Resume</div>
+                    <small class="text-secondary">Full experience overview</small>
+                  </div>
+                  <i class="fa-solid fa-arrow-down right-icon"></i>
+                </a>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/hicamilla/" target="_blank" rel="noopener norefferer"
-              class="list-group-item list-group-item-action d-flex align-items-center justify-content-between py-3">
-              <div class="fw-semibold">LinkedIn Profile</div>
-              <small class="text-secondary">Professional background</small>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <a href="https://github.com/hicamilla" target="_blank" rel="noopener noreferrer"
-              class="list-group-item list-group-item-action d-flex align-items-center justify-content-between py-3">
-              <div>
-                <div class="fw-semibold">GitHub Repository</div>
-                <small class="text-secondary">Code &amp; contribution</small>
-              </div>
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-            <a href="#" download
-              class="list-group-item list-group-item-action d-flex alaign-items-center justify-content-between py-3">
-              <div>
-                <div class="fw-semibold">Download Resume</div>
-                <small class="text-secondary">PDF, updated</small>
-              </div>
-              <i class="fa-solid fa-arrow-down"></i>
-            </a>
+            </div>
           </div>
         </div>
       </div>
@@ -148,9 +154,6 @@
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
   <script src="./index.js" defer></script>
 </body>
 

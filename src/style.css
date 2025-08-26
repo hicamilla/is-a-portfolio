@@ -492,10 +492,10 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	outline: none;
 }
 
-/* ===== ABOUT ME ===== */
+/* ===== ABOUT ME PAGE ===== */
 
 
-/* ===== WORK ===== */
+/* ===== WORK PAGE ===== */
 
 
 /* ===== CONTACT PAGE ===== */
@@ -515,20 +515,17 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 }
 
 /*Availability badge*/
-.contact-section .status-indicator {
-	display: inline-block;
+.contact-section .status-indicator .availability-badge {
 	width: 14px;
 	height: 14px;
-	color: var(--text);
 	position: relative;
-	align-self: center;
 }
 
 .contact-section .status-dot {
 	position: absolute;
 	inset: 0;
-	background: #22c55e;
 	border-radius: 50%;
+	background: #22c55e;
 }
 
 .contact-section .status-ping {
@@ -537,12 +534,13 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	border: 2px solid #22c55e;
 	border-radius: 50%;
 	opacity: .6;
-	animation: ping 1.6s cubic-bezier(0, 0, .2, 1) infinity;
+	animation: ping 1.6s cubic-bezier(0, 0, .2, 1) infinite;
 }
 
 @keyframes ping {
 	0% {
 		transform: scale(.6);
+		opacity: .8;
 	}
 
 	80%,
@@ -553,11 +551,12 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 }
 
 .contact-section .heading-text {
-	font-size: clamp(3rem, 8vw, 6rem);
-	font-family: 700;
+	font-family: var(--font-title);
+	font-weight: 700;
+	font-size: clamp(2.8rem, 7vw, 5.5rem);
 	color: var(--text);
+	letter-spacing: 0.02em;
 	padding: 15px 0;
-
 }
 
 .contact-section .lead {
@@ -570,22 +569,29 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 }
 
 .contact-section .border-top {
-	width: 96px;
+	width: 180px;
 	border: 1px solid;
-	color: var(--gray-600);
+	border-color: color-mix(in srgb, var(--text) 20%, transparent);
 }
 
-.email-title {
+/* Email */
+.email-icon {
+	width: 48px;
+	height: 48px;
+	background-color: var(--text);
+	color: var(--bg);
+	font-size: 1.1rem;
+}
+
+.contact-section .email-title {
 	font-family: var(--font-title);
 	font-weight: 600;
 	color: var(--text);
 }
 
-.email-cta {
-	font-family: var(--font-title);
-	font-weight: 700;
-	font-size: 25px;
-	color: var(--gray-800);
+.contact-section .email-cta {
+	font-size: 1.70rem;
+	text-underline-offset: .25rem;
 }
 
 .email-cta:hover {
@@ -597,62 +603,74 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	background: transparent;
 	border: 0;
 	padding: 0;
-	gap: .5rem;
+	display: inline-flex;
+	align-items: center;
+	gap: .2rem;
 	color: var(--gray-600);
 	font-family: var(--font-body);
-	font-size: clamp(.95rem, 1.1vw, 1.05rem);
+	font-size: 12px;
 	line-height: 1.2;
 	cursor: pointer;
+	margin: 8px 0 0 18px;
 }
 
-.contact-section .copy-cta .copy-ico {
-	width: 1.1rem;
-	height: 1.1rem;
-	color: var(--gray-600);
-	flex: 0 0 auto;
+.contact-section .copy-ico {
+	width: 0.75rem;
+	height: 0.75rem;
 }
 
 .contact-section .copy-cta:hover,
 .contact-section .copy-cta:focus-visible {
-	color: var(--text);
+	color: var(--contrast);
 }
 
 .contact-section .copy-cta:hover .copy-ico,
 .contact-section .copy-cta:focus-visible .copy-ico {
+	color: var(--contrast);
+}
+
+/* Right Side*/
+.contact-section .right-card {
+	width: 100%;
+	max-width: clamp(320px, 46vw, 520px);
+	background: #F4EEE7;
+	border-radius: 16px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contact-section .right-card .card-body {
+	padding: clamp(1rem, 2.5vw, 2rem) clamp(1.25rem, 3vw, 2.25p)
+}
+
+.contact-section .right-list .list-group-item {
+	background: transparent;
+	border: 0;
+	border-top: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+	padding-block: 1.1rem;
+}
+
+.contact-section .right-list .list-group-item:first-child {
+	border-top: 0;
+}
+
+.contact-section .right-list .right-icon {
+	color: var(--gray-600);
+	font-size: 0.95rem;
+	transition: transform .15s ease, color .15s ease;
+}
+
+.contact-section .right-list .list-group-item:hover .right-icon,
+.contact-section .right-list .list-group-item:focus-visible .right-icon {
+	background: color-mix(in srgb, var(--bg) 95%, var(--text) 5%);
+}
+
+.contact-section .right-list .list-group-item:hover .right-icon,
+.contact-section .right-list .list-group-item:focus-visible .right-icon {
 	color: var(--text);
-}
-
-.contact-section .copy-cta:focus-visible {
-	outline: 2px solid color-mix(in srgb, var(--text) 25%, transparent);
-	outline-offset: 2px;
-	border-radius: 6px;
+	transform: translateX(2px) translateY(-1px);
 }
 
 
-
-
-.email-icon {
-	width: 48px;
-	height: 48px;
-	background-color: black;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-}
-
-
-
-.contact-section .contact-section .list-group-item:hover .fa-arrow-up-right-from-square,
-.contact-section .list-group-item:focus-visible .fa-arrow-up-right-from-square {
-	transform: translateY(-1px);
-}
-
-.contact-section .list-group-item .fa-arrow-up-right-from-square,
-.contact-section .list-group-item .fa-arrow-down {
-	transition: transform .2s ease;
-}
 
 /* ===== FOOTER ===== */
 .footer {
