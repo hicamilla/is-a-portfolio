@@ -494,11 +494,131 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 
 /* ===== ABOUT ME PAGE ===== */
 
+.photo-wrap {
+	position: relative;
+	width: clamp(240px, 42vw, 420px);
+	margin-inline: auto;
+}
+
+.photo-wrap .ratio {
+	aspect-ratio: 4 / 5;
+	position: relative;
+	width: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.photo-wrap .ratio>img {
+	position: static;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+
+.photo-note {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	transform: translate(16%, 16%);
+	background: var(--contrast);
+	color: var(--bg-dark);
+	border-radius: 12px;
+	padding: .75rem 1rem;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+	font-family: var(--font-body);
+	font-size: .9rem;
+	line-height: 1.2;
+}
+
+.soft-card {
+	background: var(--white);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+	border-radius: 16px;
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.section-muted {
+	background: var(--bg-light);
+}
+
+.emoji-badge {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--primary);
+	color: #111;
+	font-size: 28px;
+	box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+	width: .5rem;
+	height: .5rem;
+	border-radius: 50%;
+	background: var(--primary);
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+.btn-pill {
+	border-radius: 999px;
+	padding: .75rem 1.5rem;
+	font-weight: 600;
+}
+
+.btn-primary-ghost {
+	border: 1px solid #111;
+	color: #111;
+	background: transparent;
+}
+
+.btn-primary-ghost:hover {
+	background: #111;
+	color: #fff;
+}
+
+.object-fit-cover {
+	object-fit: cover;
+}
+
 
 /* ===== WORK PAGE ===== */
 
 
 /* ===== CONTACT PAGE ===== */
+.object-fit-cover {
+	object-fit: cover;
+}
+
+.about-photo-card {
+	max-width: clamp(260px, 34vw, 480px);
+	margin-inline: auto;
+}
+
+.object-photo-surface {
+	background: var(--bg-light);
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.photo-note {
+	position: absolute;
+	right: .75rem;
+	bottom: .75rem;
+	background: var(--text);
+	color: var(--bg);
+	border-radius: 12px;
+	padding: .6rem .9rem;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	font-family: var(--font-body);
+	font-size: .9rem;
+	line-height: 1.2;
+}
+
 .contact-section .highlight-word {
 	z-index: 0;
 }
