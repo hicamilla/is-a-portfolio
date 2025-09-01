@@ -493,6 +493,24 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 }
 
 /* ===== ABOUT ME PAGE ===== */
+.about-title {
+	font-family: var(--font-title);
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+	font-weight: 800;
+	line-height: 1.2;
+	color: var(--text);
+}
+
+.about-title span {
+	color: var(--contrast);
+}
+
+.about-intro {
+	color: var(--gray-600);
+	font-size: 16px;
+	line-height: 1.6;
+	text-align: justify;
+}
 
 .photo-wrap {
 	position: relative;
@@ -513,48 +531,80 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	display: block;
 	width: 100%;
 	height: 100%;
-
 }
 
-.photo-note {
-	position: absolute;
-	right: 0px;
-	bottom: 0px;
-	transform: translate(16%, 16%);
-	background: var(--contrast);
-	color: var(--bg-dark);
-	border-radius: 12px;
-	padding: .75rem 1rem;
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-	font-family: var(--font-body);
-	font-size: .9rem;
-	line-height: 1.2;
-}
-
-.soft-card {
-	background: var(--white);
-	border: 1px solid rgba(0, 0, 0, 0.8);
-	border-radius: 16px;
-	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
-}
-
-.section-muted {
+.about-photo-surface,
+.object-photo-surface {
 	background: var(--bg-light);
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-.emoji-badge {
-	width: 64px;
-	height: 64px;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: var(--primary);
-	color: #111;
-	font-size: 28px;
-	box-shadow: 0 10px 26px rgba(0, 0, 0, 0.8);
+/* --- JOURNEY --- */
+.journey-section {
+	background: var(--bg-dark);
 }
 
+.journey-section .row.g-4 .soft-card {
+	flex: 1 1 auto;
+}
+
+.journey-section .soft-card {
+	margin-top: 0 !important;
+	position: relative;
+	flex: 1 1 auto;
+	background: rgba(255, 255, 255, 0.06);
+	border-radius: 24px;
+	padding: clamp(20px, 2.8vw, 36px);
+	box-shadow:
+		0 24px 60px rgba(0, 0, 0, 0.45),
+		0 2px 8px rgba(0, 0, 0, 0.18),
+		inset 0 1px 0 rgba(255, 255, 255, 0.06);
+	backdrop-filter: blur(14px) saturate(140%);
+}
+
+
+.journey-section .soft-card h3 {
+	font-family: var(--font-title);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: .08rem;
+	line-height: 1.05;
+	color: var(--bg);
+	padding-top: .14rem;
+	margin-bottom: .80rem;
+}
+
+.journey-section .soft-card p {
+	font-family: var(--font-title);
+	color: color-mix(in srgb, var(--bg) 82%, #9CA3AF 18%);
+	font-size: clamp(.95rem, 1.6vw, 16px);
+	letter-spacing: 0.01em;
+}
+
+/* Emoji badge INSIDE the card (top-left), rounded square */
+.journey-section .emoji-badge {
+	position: static !important;
+	transform: none !important;
+	margin: 0 0 1rem 0 !important;
+	width: clamp(48px, 5.2vw, 54px);
+	height: clamp(48px, 5.2vw, 54px);
+	border-radius: 14px;
+	display: grid;
+	place-items: center;
+	font-size: clamp(24px, 2.6vw, 22px);
+	background: rgba(255, 255, 255, 0.06);
+	color: var(--bg);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.08),
+		0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Experience */
+.experience-section {
+	background: var(--bg-dark);
+}
+
+/* Skills */
 .dot {
 	width: .5rem;
 	height: .5rem;
@@ -565,6 +615,9 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	margin-right: .5rem;
 }
 
+/* Personal */
+
+/* Contact */
 .btn-pill {
 	border-radius: 999px;
 	padding: .75rem 1.5rem;
@@ -581,11 +634,6 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	background: #111;
 	color: #fff;
 }
-
-.object-fit-cover {
-	object-fit: cover;
-}
-
 
 /* ===== WORK PAGE ===== */
 
@@ -789,8 +837,6 @@ section[tabindex="-1"]:focus:not(:focus-visible) {
 	color: var(--text);
 	transform: translateX(2px) translateY(-1px);
 }
-
-
 
 /* ===== FOOTER ===== */
 .footer {
