@@ -1,6 +1,3 @@
-// Beginner-friendly partial loader + simple behaviors
-// Works with placeholders: <div id="navbar-placeholder"></div> and <div id="footer-placeholder"></div>
-
 document.addEventListener('DOMContentLoaded', function () {
   // 1) Load partials (navbar + footer), then initialize behaviors
   Promise.all([
@@ -18,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
         return res.text();
       })
-      .then(function (html) { slot.outerHTML = html; })
+      .then(function (html) { slot.innerHTML = html; })
       .catch(function (err) {
         console.error('Include failed:', url, err);
-        slot.outerHTML = '<!-- include failed: ' + url + ' -->';
+        slot.innerHTML = '<!-- include failed: ' + url + ' -->';
       });
   }
 
@@ -48,14 +45,18 @@ document.addEventListener('DOMContentLoaded', function () {
         // Close the mobile navbar (if using Bootstrap bundle)
         var nav = document.querySelector('.navbar-collapse');
         if (nav && nav.classList.contains('show') && window.bootstrap) {
-          var inst = window.bootstrap.Collapse.getInstance(nav) || new window.bootstrap.Collapse(nav, { toggle: false });
+          var inst = window.bootstrap.Collapse.getInstance(nav);
+          if (!inst) {
+            inst = new window.bootstrap.Collapse(nav, { toggle: false });
+          }
           inst.hide();
         }
       });
     });
 
-    // 4) Global copyEmail for inline onclick
-    window.copyEmail = function (btn) {
+    // 4) Namespaced copyEmail for inline onclick
+    window.app = window.app || {};
+    window.app.copyEmail = function (btn) {
       var email = (btn && btn.dataset && btn.dataset.email) ? btn.dataset.email : 'hicamillacardoso@gmail.com';
 
       function flash(text) {
@@ -72,11 +73,17 @@ document.addEventListener('DOMContentLoaded', function () {
           function () { flash('Copied!'); },
           function () { flash('Copy failed'); }
         );
-        return;
+      } else {
+        // Fallback: prompt (no deprecated execCommand)
+        window.prompt('Copy this email:', email);
       }
-
-      // Fallback: prompt (no deprecated execCommand)
-      window.prompt('Copy this email:', email);
     };
+
+    // 5) Initialize Bootstrap tooltips
+    if (window.bootstrap && window.bootstrap.Tooltip) {
+      document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+        new window.bootstrap.Tooltip(el);
+      });
+    }
   }
 });

@@ -32,52 +32,100 @@
   <link rel="stylesheet" href="./src/style.css" />
 </head>
 
-<body>
+<body class="page-about">
   <!-- ==== Navbar ==== -->
   <div id="navbar-placeholder"></div>
 
   <!-- ==== Hero ==== -->
-  <section class="about-hero">
-    <div class="container">
-      <div class="p-4 p-md-5">
-        <div class="row align-items-center g-5">
-          <!--Left-->
-          <div class="col-12 col-lg-6 order-2 ">
-            <h1 class="about-title mb-4">
-              Hey,
-              <br>
-              I'm
-              <span>Camilla</span>
-            </h1>
-            <div class="short-divider mb-4"></div>
-            <p class=" about-intro font-body mb-0">
-              Front-end developer who loves turning complexity into simple, beautiful experiences.
-              <br>
-              <br>
-              When I'm not polishing components or chasing performance wins, I'm exploring new web tech,
-              helping other devs, or… redesigning my portfolio (again 😅).
-            </p>
+  <section id="about-hero" class="py-5 position-relative overflow-hidden">
+
+    <!--Decorative Circles-->
+    <span class="hero-bg hero-bg-1"></span>
+    <span class="hero-bg hero-bg-2"></span>
+    <span class="hero-bg hero-bg-3"></span>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+
+        <!--Left Side-->
+        <div class="col-lg-7 order-2 order-lg-1">
+          <h1 class="display-4 fw-bold mb-3 font-title">
+            Hey, I'm&nbsp;
+            <span class="position-relative d-inline-block">
+              <span class="hero-name-gradient">Camilla</span>
+              <span class="hero-name-underline position-absolute"></span>
+            </span>
+          </h1>
+
+          <!--Subtitle Line-->
+          <div class="d-flex align-items-center mb-4">
+            <span class="small text-muted font-body">Based in Düsseldorf, Germany</span>
           </div>
-          <!--Right (image)-->
-          <div class="col-12 col-lg-6 order-1 order-lg-2 d-flex justify-content-lg-end">
-            <div class="photo-wrap about-photo-card m-0">
-              <div class="about-photo-surface rounded-4 overflow-hidden" style="aspect-ratio: 4 / 5;">
-                <img src="./images/perfil-1.jpg" alt="Camilla - Frontend Developer"
-                  class="w-100 h-100 object-fit-cover" />
-              </div>
-              <div class=" photo-note">
-                <div class="fw-semibold">Based in Düsseldorf</div>
-                <small class="opacity-75">
-                  Available for projects
-                </small>
+
+          <!--Lead Text-->
+          <p class="mb-4 font-body">
+            <span class="fw-semibold">Frontend developer</span> who believes code should be as elegant as the
+            interfaces it creates.
+            I turn complex problems into simple, beautiful solutions that users actually want to use.
+            <br>
+            <br>
+            When I'm not crafting pixel-perfect components or optimizing performance, you'll find me exploring the
+            latest web technologies, mentoring other developers, or probably redesigning my personal site for the
+            hundredth time.
+          </p>
+
+          <!--Icons Row-->
+          <div class="d-flex gap-4">
+
+            <!--Icon 1-->
+            <div class="text-center">
+              <button type="button" class="hotspot-btn bg-gradient-amber" data-bs-toggle="tooltip" data-bs-html="true"
+                aria-label="Coffee — tooltip: Coffee Enthusiast"
+                title="<strong>Coffee Enthusiast</strong><br><span class='small text-muted'>Specialty coffee rituals fuel creativity</span>">
+                <i class="fa-solid fa-mug-hot"></i>
+              </button>
+            </div>
+
+            <!--Icon 2-->
+            <div class="text-center">
+              <button type="button" class="hotspot-btn bg-gradient-blue" data-bs-toggle="tooltip" data-bs-html="true"
+                aria-label="Adventure — tooltip: Runner"
+                title="<strong>Running</strong><br><span class='small text-muted'>Finding clarity on mountain trails</span>">
+                <i class="fa-solid fa-person-running"></i>
+              </button>
+            </div>
+
+            <!-- Icon 3 -->
+            <div class="text-center">
+              <button type="button" class="hotspot-btn bg-gradient-purple" data-bs-toggle="tooltip" data-bs-html="true"
+                aria-label="Learning — tooltip: Continuous Learner"
+                title="<strong>Continuous Learner</strong><br><span class='small text-muted'>Al ways exploring emerging technologies</span>">
+                <i class="fa-solid fa-book-open"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--Right Side-->
+        <div class="col-lg-5 order-1 order-lg-2 position-relative">
+          <div class="position-relative hero-image-wrapper mx-auto">
+            <div class="bg-gradient-shadow position-absolute top-50 start-50 translate-middle w-100 h-100 rounded-3">
+            </div>
+            <!--Picture-->
+            <div class="image-card border rounded-3 overflow-hidden shadow">
+              <img src="./images/perfil-1.jpg" alt="Camilla - Frontend developer"
+                class="img-fluid object-fit-cover w-100 h-100">
+              <div class="overlay-gradient position-absolute top-0 start-0 w-100 h-100"></div>
+            </div>
+            <!--Availability Badge-->
+            <div class="work-badge position-absolute">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge-dot"></span>
+                <span class="fw-medium small font-body">Available for work</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
   </section>
 
   <!-- WAVE DIVIDER TOP -->
@@ -213,70 +261,29 @@
       </div>
   </section>
 
-  <!-- ==== Skills ==== -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center font-title text-uppercase mb-4 fw-bolder fs-1"
-        style="color:var(--bg);letter-spacing: 3px;">
-        What I work with
-      </h2>
-      <div class="row g-3">
-        <!--Section 1-->
-        <div class="col-md-6 col-lg-3">
-          <div class="soft-card p-3 h-100">
-            <h3 class="h5 mb-2" style="color:var(--primary)">
-              Frontend
-            </h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1"><span class="dot"></span> React</li>
-              <li class="mb-1"><span class="dot"></span> JavaScript</li>
-              <li class="mb-1"><span class="dot"></span> Bootstrap</li>
-              <li class="mb-1"><span class="dot"></span> HTML & CSS</li>
-              <li class="mb-1"><span class="dot"></span> Animations (basic)</li>
-            </ul>
-          </div>
-        </div>
-        <!--Section 2-->
-        <div class="col-md-6 col-lg-3">
-          <div class="soft-card p-3 h-100">
-            <h3 class="h5 mb-2" style="color:var(--primary)">
-              Design
-            </h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1"><span class="dot"></span> Figma</li>
-              <li class="mb-1"><span class="dot"></span> UI/UX</li>
-              <li class="mb-1"><span class="dot"></span> Wireframes</li>
-              <li class="mb-1"><span class="dot"></span> Prototyping</li>
-            </ul>
-          </div>
-        </div>
-        <!--Section 3-->
-        <div class="col-md-6 col-lg-3">
-          <div class="soft-card p-3 h-100">
-            <h3 class="h5 mb-2" style="color:var(--primary)">
-              Tools
-            </h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1"><span class="dot"></span> Git & GitHub</li>
-              <li class="mb-1"><span class="dot"></span> Vite / Webpack</li>
-              <li class="mb-1"><span class="dot"></span> Storybook</li>
-              <li class="mb-1"><span class="dot"></span> Testing</li>
-            </ul>
-          </div>
-        </div>
-        <!--Section 4-->
-        <div class="col-md-6 col-lg-3">
-          <div class="soft-card p-3 h-100">
-            <h3 class="h5 mb-2" style="color:var(--primary)">
-              Learning
-            </h3>
-            <ul class="list-unstyled mb-0">
-              <li class="mb-1"><span class="dot"></span> Three.js</li>
-              <li class="mb-1"><span class="dot"></span> Node.js</li>
-              <li class="mb-1"><span class="dot"></span> APIs / GraphQL</li>
-            </ul>
-          </div>
-        </div>
+  <!-- ==== SKILLS ==== -->
+  <section class="skills-section py-5">
+    <div class="container text-center">
+      <p class="lead mb-5 mx-auto font-body" style="max-width:600px;">
+        Technologies that and tools I use to build digital experiences
+      </p>
+
+      <!--Skills balloons-->
+      <div class="d-flex flex-wrap justify-content-center gap-3 font-body">
+        <span class="skill-badge">React</span>
+        <span class="skill-badge">TypeScript</span>
+        <span class="skill-badge">Next.js</span>
+        <span class="skill-badge">Tailwind CSS</span>
+        <span class="skill-badge">Framer Motion</span>
+        <span class="skill-badge">Figma</span>
+        <span class="skill-badge">UI/UX Design</span>
+        <span class="skill-badge">Prototyping</span>
+        <span class="skill-badge">Git</span>
+        <span class="skill-badge">Testing Libraries</span>
+        <span class="skill-badge">Node.js</span>
+        <span class="skill-badge">CSS</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">Bootstrap</span>
       </div>
     </div>
   </section>
@@ -289,55 +296,11 @@
     </svg>
   </div>
 
-  <!-- ==== Personal ==== -->
-  <section class="py-5 section-muted">
-    <div class="container">
-      <h2 class="text-center mb-4" style="font-weight:800">
-        Beyond the Code
-      </h2>
-
-      <div class="row g-4 mb-4">
-        <!--Touch 1-->
-        <div class="col-md-4">
-          <div class="text-center p-4 soft-card h-100">
-            <div class="fs-1 mb-2">☕️</div>
-            <h3 class="h5 mb-2">Coffee Enthusiast</h3>
-            <p class="text-secondary mb-0">
-              Best code + best brew = perfect day
-            </p>
-          </div>
-        </div>
-        <!--Touch 2-->
-        <div class="col-md-4">
-          <div class="text-center p-4 soft-card h-100">
-            <div class="fs-1 mb-2">🏃🏽‍♀️</div>
-            <h3 class="h5 mb-2">Runner</h3>
-            <p class="text-secondary mb-0">
-              Fresh ideas from endorphins
-            </p>
-          </div>
-        </div>
-        <!--Touch 3-->
-        <div class="col-md-4">
-          <div class="text-center p-4 soft-card h-100">
-            <div class="fs-1 mb-2">📚</div>
-            <h3 class="h5 mb-2">Lifelong Learner</h3>
-            <p class="text-secondary mb-0">
-              Constantly reading about web, tech, and people (also, fun facts).
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- ==== CTA ==== -->
   <section class="py-5 section-muted">
     <div class="container">
       <div class="text-center p-4 soft-card">
-        <h3 class="h4 mb-2">Let's work together</h3>
-        <p class="text-secondary mb-3">
-          From startup MVPs to full transformations — if it's meaningful, I'm in.
-        </p>
+        <h3 class="h4 mb-2">Let's Connect</h3>
         <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
           <a href="/work.html" class="btn btn-dark btn-pill">View my work</a>
           <a href="mailto:hicamillacardoso@gmail.com" class="btn btn-primary-ghost btn-pill">Get in touch</a>
