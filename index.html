@@ -32,251 +32,64 @@
   <link rel="stylesheet" href="./src/style.css" />
 </head>
 
-<body class="page-home">
+<body class="home-page">
   <header>
-    <!--NAVBAR-->
+    <!-- ================== NAVBAR ================== -->
     <div id="navbar-placeholder"></div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main id="home" class="hero-container">
-    <!-- HERO SECTION -->
-    <section id="home-hero" class="main-content py-5" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="row align-items-center justify-content-evenly">
-          <!-- TEXT COLUMN -->
-          <div class="col-12 col-lg-6 order-2 order-lg-1 pt-3">
-            <header>
-              <h1 id="hero-title" class="main-title">
-                CAMILLA <br />
-                <span class="title-with-stroke">
-                  CARDOSO
-                  <span class="title-stroke" aria-hidden="true">CARDOSO</span>
-                </span>
-              </h1>
-            </header>
+  <!-- ================== MAIN CONTENT ================== -->
+  <section id="hero" class="py-5 position-relative overflow-hidden">
 
-            <div id="about" class="content-below pt-4">
-              <div class="divider-line mb-4" aria-hidden="true"></div>
-              <div class="role-text mb-3">FRONTEND DEVELOPER</div>
-              <div class="description-text">
-                Hi, I'm Camilla, a Frontend Developer passionate about crafting engaging digital experiences and
-                building intuitive user interfaces. Let's create something amazing together!
-              </div>
-            </div>
-          </div>
-
-          <!-- IMAGE COLUMN -->
-          <div class="col-12 col-lg-5 order-1 order-lg-2 text-center text-lg-end">
-            <figure class="m-0">
-              <div class="card-stack d-inline-block">
-                <!-- Back cards (decorative) -->
-                <img src="./images/img_thumb_logo.png" width="600" height="1000" alt="" aria-hidden="true"
-                  class="card card-left" loading="lazy" />
-                <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="" aria-hidden="true"
-                  class="card card-right" loading="lazy" />
-                <!-- Main card (announced to screen readers) -->
-                <img src="./images/img_thumb_logo.png" width="800" height="1000" alt="Camilla Cardoso - portrait/logo"
-                  decoding="async" fetchpriority="high" class="card middle" />
-              </div>
-            </figure>
-          </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h1 class="lh-1 hero-name">
+            <span class="hero-first">Camilla&nbsp;</span>
+            <span class="hero-last">Cardoso</span>
+          </h1>
+          <p class="hero-lead mb-0">Frontend Developer &amp; Marketer
+          </p>
         </div>
       </div>
-    </section>
-
-    <!-- WAVE DIVIDER TOP -->
-    <div class="wave-separator wave--bg-to-text" aria-hidden="true">
-      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
-        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
-        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
-      </svg>
     </div>
 
-    <!-- WORK SECTION -->
-    <section id="work" class="work-collection position-relative" aria-labelledby="work-title">
-      <div class="container-xl">
-        <div class="rounded-4 shadow-sm">
-          <header class="intro text-center mx-auto">
-            <p class="overline mb-2"> Selected Work</p>
-            <h2 id="work-title" class="display-6 fw-800 font-title mb-2">Here goes a text </h2>
-          </header>
-          <!--Collage-->
-          <div class="collage my-lg-5">
-            <figure class="tile t1" data-aos="fade-up">
-              <img src="./images/work-1.jpg" alt="Project One - Landing page redesign">
-              <div class="overlay">
-                <strong class="title">Project One</strong>
-              </div>
-            </figure>
-            <figure class="tile t2" data-aos="fade-up">
-              <img src="./images/work-2.jpg" alt="Project Two - Landing page redesign">
-              <div class="overlay">
-                <strong class="title">Project Two</strong>
-              </div>
-            </figure>
-            <figure class="tile t3" data-aos="fade-up">
-              <img src="./images/work-3.jpg" alt="Project Three - Landing page redesign">
-              <div class="overlay">
-                <strong class="title">Project Three</strong>
-              </div>
-            </figure>
-            <figure class="tile t4" data-aos="fade-up">
-              <img src="./images/work-4.jpg" alt="Project Four - Landing page redesign">
-              <div class="overlay">
-                <strong class="title">Project Four</strong>
-              </div>
-            </figure>
-          </div>
+    <!--Scroll Indicator-->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
 
-          <!--BTN CTA-->
-          <div class="text-center mt-4">
-            <a href="#!" class="btn btn-contrast btn-lg px-4">
-              MORE PROJECTS
-            </a>
-          </div>
+  <!-- ================== WORK ================== -->
+  <section id="work" class="py-5 bg-dark text-light">
+    <div class="container">
+
+      <!--row-->
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h2 class="row-title font-title text-uppercase mb-3">Work</h2>
+          <p class="font-body fw-300 opacity-75 mx-auto lh-2" style="max-width:600px">
+            A curated collection of projects that showcase my approach to solving complex design challenges
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- WAVE DIVIDER BOTTOM -->
-    <div class="wave-separator wave--text-to-bg" aria-hidden="true">
-      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
-        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
-        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
-      </svg>
-    </div>
+      <!-- Projects grid -->
+      <div id="projects-grid" class="row g-4"></div>
 
-    <!-- SKILL SECTION -->
-    <section id="skills" class="skills-section position-relative py-5" aria-labelledby="skills-title">
-      <h2 id="skills-title" class="visually-hidden">Skills</h2>
-      <div class="container">
-        <!-- Three service cards -->
-        <div class="row g-4 justify-content-center text-center my-5">
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="feature-card h-100">
-              <div class="shape shape-arch" aria-hidden="true"></div>
-              <h3 class="feature-title">Web Development</h3>
-              <p class="feature-text px-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac augue euismod, egestas lectus et,
-                condimentum odio.
-                Phasellus eleifend, odio mauris.
-              </p>
-            </article>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="feature-card h-100">
-              <div class="shape shape-quarter" aria-hidden="true"></div>
-              <h3 class="feature-title">UI/Visual Design</h3>
-              <p class="feature-text px-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac augue euismod, egestas lectus et,
-                condimentum odio.
-                Phasellus eleifend, odio mauris.
-              </p>
-            </article>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <article class="feature-card h-100">
-              <div class="shape shape-leaf" aria-hidden="true"></div>
-              <h3 class="feature-title">Marketing & Analytics</h3>
-              <p class="feature-text px-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac augue euismod, egestas lectus et,
-                condimentum odio.
-                Phasellus eleifend, odio mauris.
-              </p>
-            </article>
-          </div>
-        </div>
-        <!-- Tech stack strip -->
-        <div id="stack" class="stack-section" aria-labelledby="stack-title">
-          <h2 id="stack-title" class="visually-hidden">Tech Stack</h2>
-          <div class="container">
-            <div class="logos-inner py-3 px-3">
-              <div
-                class="row stack-icons row-cols-2 row-cols-sm-3 row-cols-md-auto g-4 justify-content-center align-items-center text-center">
-                <div class="col"><span class="logo-icon" aria-label="HTML5"><i class="fa-brands fa-html5"></i></span>
-                </div>
-                <div class="col"><span class="logo-icon" aria-label="CSS3"><i class="fa-brands fa-css3-alt"></i></span>
-                </div>
-                <div class="col"><span class="logo-icon" aria-label="JavaScript"><i class="fa-brands fa-js"></i></span>
-                </div>
-                <div class="col"><span class="logo-icon" aria-label="React"><i class="fa-brands fa-react"></i></span>
-                </div>
-                <div class="col"><span class="logo-icon" aria-label="Bootstrap"><i
-                      class="fa-brands fa-bootstrap"></i></span>
-                </div>
-                <div class="col"><span class="logo-icon" aria-label="Python"><i class="fa-brands fa-python"></i></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Button -->
+      <div class="text-center">
+        <button class="btn btn-outline-light btn-lg mt-5" id="view-all-btn">
+          More Projects
+        </button>
       </div>
-    </section>
-
-    <!-- SECTION DIVIDER (thin wave + accent pill) -->
-    <div class="wave-separator wave--text-to-bg wave--sm wave--flip" aria-hidden="true">
-      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
-        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
-        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
-      </svg>
     </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-5" style="background: var(--bg-dark); color: var(--bg);">
-      <div class="container">
-        <!-- Header -->
-        <div class="row align-items-end g-3 mb-3">
-          <div class="col">
-            <h2 class="display-3 fw-bold font-title m-0">GET IN TOUCH</h2>
-          </div>
-        </div>
+  <!-- ================== CONTACT ================== -->
 
-        <!-- Main grid -->
-        <div class="row position-relative g-4">
-          <div
-            class="availability-badge position-absolute top-0 start-0 mt-4 ms-1 px-1 py-1 d-inline-flex align-items-center gap-3">
-            <span class="status-indicator"></span>
-            <span class="fw-bold text-uppercase" style="letter-spacing: 1px">Available for Work</span>
-          </div>
 
-          <!-- LEFT: CTA -->
-          <div class="col-lg-7 pt-5">
-            <h3 class="fw-bolder lh-1 display-5 font-title mb-4">
-              Let's create something<br><span class="fst-italic">amazing together</span>
-            </h3>
-            <p class="fs-6 font-body lh-base mb-0" style="color:var(--bg-light)">
-              Whether you have a specific project in mind or just want to explore possibilities, I'm here to help bring
-              your ideas to life.
-              Every great project starts with a conversation.
-            </p>
-
-            <div class="d-flex flex-wrap gap-2 pt-5">
-              <a class="btn btn-contrast d-inline-flex align-items-center gap-2"
-                href="mailto:hicamillacardoso@gmail.com">
-                Send me an email
-                <svg width="40" height="30" viewBox="0 0 25 25" fill="none" stroke="currentColor" stroke-width="2"
-                  aria-hidden="true">
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- WAVE DIVIDER BOTTOM -->
-    <div class="wave-separator wave--text-to-bg" aria-hidden="true">
-      <svg class="wave" viewBox="0 0 1440 160" preserveAspectRatio="none" focusable="false">
-        <path class="wave-top" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,0 L0,0 Z"></path>
-        <path class="wave-bottom" d="M0,96 C220,24 500,168 720,96 C960,24 1220,140 1440,72 L1440,160 L0,160 Z"></path>
-      </svg>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
+  <!-- ================== FOOTER ================== -->
   <div id="footer-placeholder"></div>
 
   <!-- Bootstrap JS Bundle -->

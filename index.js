@@ -79,11 +79,69 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     };
 
-    // 5) Initialize Bootstrap tooltips
+    // 5 Initialize Bootstrap tooltips
     if (window.bootstrap && window.bootstrap.Tooltip) {
       document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
         new window.bootstrap.Tooltip(el);
       });
     }
+    //6 Input projects
+    const projects = [
+      {
+        title: "Analytics Dashboard",
+        image: "images/work-1.jpg",
+        alt: "Analytics Dashboard",
+        link: "work-project1-html"
+      },
+      {
+        title: "E-Commerce App",
+        image: "images/work-1.jpg",
+        alt: "E-commerce App",
+        link: "work-project2-html"
+      },
+      {
+        title: "Design System",
+        image: "images/work-1.jpg",
+        alt: "Design System",
+        link: "work-project3.html"
+      },
+      {
+        title: "Marketing Website",
+        image: "images/work-1.jpg",
+        alt: "Marketing Website",
+        link: "work-project4.html"
+      },
+      {
+        title: "Portfolio Redesign",
+        image: "images/work-1.jpg",
+        alt: "Portfolio Redesign",
+        link: "work-project5.html"
+      },
+      {
+        title: "Mobile App Prototype",
+        image: "images/work-1.jpg",
+        alt: "Mobile App Prototype",
+        link: "work-project6.html"
+      }
+    ]
+
+    function renderProjects() {
+      const grid = document.getElementById("projects-grid");
+      if (!grid) return;
+
+      grid.innerHTML = projects.map(p => `
+    <div class="col-md-6 col-lg-4">
+      <a href="${p.link}" class="project-thumb d-block position-relative overflow-hidden rounded-3">
+        <img src="${p.image}" alt="${p.alt}" class="img-fluid w-100 h-100 object-fit-cover">
+        <div class="overlay d-flex align-items-center justify-content-center">
+          <h3 class="overlay-title text-center m-0">${p.title}</h3>
+        </div>
+      </a>
+    </div>
+  `).join("");
+    }
+
+    //run after DOM loaded
+    renderProjects();
   }
 });
