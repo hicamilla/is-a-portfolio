@@ -207,8 +207,8 @@ figure {
 }
 
 #work #view-all-btn:hover {
-	background: var(255, 255, 255, 0.12);
-	border-color: var(255, 255, 255, 0.55);
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.55);
 	color: var(--bg-light);
 	transform: translateY(-1px);
 }
@@ -220,6 +220,24 @@ figure {
 
 /* --- Contact Section ---*/
 
+#contact #view-button {
+	border-color: rgba(255, 255, 255, 0.35);
+	color: var(--bg-light);
+	letter-spacing: 0.02em;
+	transition: all .25s ease;
+}
+
+#contact #view-button:hover {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.55);
+	color: var(--bg-light);
+	transform: translateY(-1px);
+}
+
+#contact #view-button:focus-visible {
+	outline: 2px solid var(--bg-light);
+	outline-offset: 2px;
+}
 
 /* ====================== ABOUT ME PAGE ====================== */
 /* --- Gradient Circles --- */
