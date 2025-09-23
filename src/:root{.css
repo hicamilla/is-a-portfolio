@@ -1,0 +1,29 @@
+:root {
+  --bg-dark: #2f3131;
+  --text-light: #f3f0f0;
+  --text-dark: #050200;
+  --contrast-light: #e7e9da;
+  --accent-primary: #10b981;
+  --accent-secondary: #2563eb;
+  --gray-300: #d5d5d5;
+  --gray-400: #b1b1b1;
+  --gray-500: #909090;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+
+  /* soft tint of primary for subtle callouts */
+  --primary-soft: #e6fbf4;
+  --primary-ink: #064e3b;
+
+  /* utilities */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, .10);
+  --radius: 16px;
+
+  /*accent*/
+  --accent-hover: color-mix(in srgb, var(--accent) 88%, black);
+  --accent-soft: #eaf1ff;
+  /* soft bg for chips/badges */
+  --accent-ink: #0b1a55;
+  /* text on accent-soft */
+}

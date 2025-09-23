@@ -39,113 +39,108 @@
   </header>
 
   <!-- ================== MAIN CONTENT ================== -->
-  <section id="hero" class="py-5 position-relative overflow-hidden">
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <h1 class="lh-1 hero-name">
-            <span class="hero-first">Camilla&nbsp;</span>
-            <span class="hero-last">Cardoso</span>
-          </h1>
-          <p class="hero-lead mb-0">Frontend Developer &amp; Marketer
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!--Scroll Indicator-->
-    <div class="scroll-indicator" aria-hidden="true">
-      <div class="scroll-dot"></div>
-    </div>
-  </section>
-
-  <!-- ================== WORK ================== -->
-  <section id="work" class="py-5 bg-dark text-light">
-    <div class="container">
-
-      <!--row-->
-      <div class="row">
-        <div class="col-12 text-center mb-4">
-          <h2 class="row-title font-title text-uppercase mb-3">Work</h2>
-          <p class="font-body fw-300 opacity-75 mx-auto lh-2" style="max-width:600px">
-            A curated collection of projects that showcase my approach to solving complex design challenges
-          </p>
-        </div>
-      </div>
-
-      <!-- Projects grid -->
-      <div id="projects-grid" class="row g-4"></div>
-
-      <!-- Button -->
-      <div class="text-center">
-        <button class="btn btn-outline-light btn-lg mt-5" id="view-all-btn">
-          More Projects
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================== CONTACT ================== -->
-  <section class="contact-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="text-center">
-
-            <!-- Header -->
-            <div class="mb-5">
-              <div class="status-badge">
-                <div class="status-dot"></div>
-                Available for work
-              </div>
-              <h2 class="section-title">
-                Get in touch
-              </h2>
-              <p class="section-description">
-                Contact me directly for new projects
-              </p>
-            </div>
-
-            <!-- Contact Grid -->
-            <div class="row justify-content-center">
-              <div class="col-12 col-md-8 col-lg-6">
-
-                <!-- Email Card -->
-                <div class="email-card">
-                  <div class="email-card-content">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <div class="text-start">
-                        <a href="mailto:hicamillacardoso@gmail.com" class="email-address font-body">
-                          hicamillacardoso@gmail.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Copy Icon -->
-                  <button class="copy-cta" type="button" onclick="copyEmail(this)"
-                    data-email="hicamillacardoso@gmail.com" aria-label="Copy email address" aria-live="polite">
-                    <svg class="copy-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                    <span class="copy-label">Copy email address</span>
-                  </button>
-                </div>
-              </div>
-            </div>
+  <main id="main-content" role="main">
+    <section id="hero" class="py-5 position-relative overflow-hidden">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <h1 class="lh-1 hero-name">
+              <span class="hero-first">Camilla&nbsp;</span>
+              <span class="hero-last">Cardoso</span>
+            </h1>
+            <p class="hero-lead mb-0">Frontend Developer &amp; Marketer
+            </p>
           </div>
         </div>
       </div>
+      <!--Scroll Indicator-->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- ================== WORK ================== -->
+    <section id="work" class="py-5 bg-dark text-light">
+      <div class="container">
+        <!--Row-->
+        <div class="row">
+          <div class="col-12 text-center mb-4">
+            <h2 class="row-title font-title text-uppercase mb-3">Work</h2>
+            <p class="font-body fw-300 opacity-75 mx-auto lh-2" style="max-width:600px">
+              A curated collection of projects that showcase my approach to solving complex design challenges
+            </p>
+          </div>
+        </div>
+
+        <!-- Projects grid -->
+        <div id="projects-grid" class="row g-4"></div>
+
+        <!-- Button -->
+        <div class="text-center">
+          <button class="btn btn-outline-light btn-lg mt-5" id="view-all-btn">
+            More Projects
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================== CONTACT ================== -->
+  <section id="connect" class="connect-section py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-lg-10">
+
+          <!--Samll header-->
+          <div class="d-inline-flex align-items-center gap-3 mb-4">
+            <span class="connect-line"></span>
+            <span class="text-uppercase small fw-medium connect-eyebrow">
+              Let's Connect
+            </span>
+            <span class="connect-line"></span>
+          </div>
+
+          <!--Title-->
+          <h2 class="display-4 fw-light mb-3 connect-title">
+            Ready to create something
+            <span class="connect-accent"> amazing </span>
+            ?
+          </h2>
+
+          <!--Lead text-->
+          <p class="lead mb-5 connect-lead">
+            I'm currently accepting new projects and would love to hear about yours. Let's collaborate!
+          </p>
+
+          <!--CTA-->
+          <div class="mb-5">
+            <a href="mailto:hicamillacardoso@gmail.com" class="btn btn-outline-light btn-lg rounded-pill px-5"
+              id="connect-email-btn" aria-label="Send an email">
+              Send email
+            </a>
+          </div>
+
+          <!--Availability -->
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <div class="d-flex align-items-center gap-2" aria-hidden="true">
+              <span class="status-dot dot-1"></span>
+              <span class="status-dot dot-2"></span>
+              <span class="status-dot dot-3"></span>
+            </div>
+            <span class="text-uppercase small fw-medium connect-eyebrow">
+              Available for Work
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ================== FOOTER ================== -->
   <div id="footer-placeholder"></div>
 
   <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
