@@ -1,8 +1,11 @@
 //Run everything after loaded
 document.addEventListener('DOMContentLoaded', function () {
   loadPartials().then(function () {
-    setCurrentYear();
-    highlightActivePage();
+    loadPartials('availability-placeholder', 'partials/availability-badge.html')
+      .then(function () {
+        setCurrentYear();
+        highlightActivePage();
+      });
   });
 
   renderProjects();
@@ -14,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
 function loadPartials() {
   var p1 = loadPartial('navbar-placeholder', 'partials/navbar.html');
   var p2 = loadPartial('footer-placeholder', 'partials/footer.html');
-  return Promise.all([p1, p2]);
+  var p3 = loadPartial('availability-placeholder', 'partials/availability-badge.html');
+  return Promise.all([p1, p2, p3]);
 }
 
 function loadPartial(placeholderId, url) {
